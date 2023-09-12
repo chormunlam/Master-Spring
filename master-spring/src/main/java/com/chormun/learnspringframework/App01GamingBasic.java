@@ -5,7 +5,7 @@ import com.chormun.learnspringframework.game.GameRunner;
 import com.chormun.learnspringframework.game.MarioGame;
 import com.chormun.learnspringframework.game.SuperContraGame;
 
-public class App01GamingBasicJava {
+public class App01GamingBasic {
     public static void main(String[] args){
         var game1 =new MarioGame();
         var game2 = new SuperContraGame();

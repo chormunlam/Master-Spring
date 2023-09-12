@@ -1,8 +1,9 @@
 package com.chormun.learnspringframework.game;
 
 public class GameRunner {
-    MarioGame game;
-    public GameRunner(MarioGame game) {
+    private GamingConsole game;
+    //MarioGame game;
+    public GameRunner(GamingConsole game) {
         this.game=game;
     }
 
@@ -10,5 +11,7 @@ public class GameRunner {
         System.out.println("runiing game: " + game);
         game.up();
         game.down();
+        game.left();
+        game.right();
     }
 }

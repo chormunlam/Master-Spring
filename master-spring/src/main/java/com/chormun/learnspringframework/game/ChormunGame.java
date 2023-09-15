@@ -1,5 +1,10 @@
 package com.chormun.learnspringframework.game;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class ChormunGame implements GamingConsole{
 
 

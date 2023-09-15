@@ -1,4 +1,4 @@
-package com.chormun.learnspringframework;
+package com.chormun.learnspringframework.game;
 
 import com.chormun.learnspringframework.game.ChormunGame;
 import com.chormun.learnspringframework.game.GameRunner;

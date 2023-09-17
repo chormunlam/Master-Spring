@@ -10,7 +10,7 @@ public class ChormunGame implements GamingConsole{
 
     @Override
     public void up() {
-        System.out.println("run up slide banana");
+        System.out.println("run up slide fast+1 banana");
 
     }
 

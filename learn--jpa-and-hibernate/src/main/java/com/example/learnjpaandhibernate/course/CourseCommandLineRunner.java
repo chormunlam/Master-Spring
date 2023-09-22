@@ -27,14 +27,19 @@ public class CourseCommandLineRunner implements CommandLineRunner {
         //for springJPA
         repo.save(new Course(4, "Learn kafka now!", "in28 min"));
         repo.save(new Course(1, "Learn AWS now!", "in28 min"));
-        repo.save(new Course(2, "Learn cloue now!", "in28 min"));
+        repo.save(new Course(2, "Lucky now!", "chormun"));
         repo.save(new Course(3, "Learn doker now!", "in28 min"));
 
 
        // repo.delete(1);
         repo.deleteById(1l);
-
-        System.out.println(repo.findById(2l));
+//
+//        System.out.println(repo.findById(2l));
+//
+//        System.out.println(repo.count());
+//        System.out.println(repo.findByAuthor("chormun"));
+//        System.out.println(repo.findByAuthor("in28 min"));
+        System.out.println(repo.findByName("Lucky now!"));
 
 
 

@@ -2,16 +2,15 @@
 <html>
 <head>
 
-    <title>login page</title>
+    <title>welcome page</title>
 </head>
 <body>
- welcom to the login page!
-<form method="post">
-    Name: <input type="text" name="name">
-    password: <input type="password" name="password">
-    <input type="submit" >
+ welcom to the welcome page!
+<div>your name: ${name}</div>
+<%-- <div>your passowrd: ${password}</div>--%>
 
-</form>
+
+
 
 </body>
 </html>

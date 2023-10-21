@@ -10,12 +10,12 @@ public class TodoService {
     private static List<Todo> todos=new ArrayList<>();
     private static int todosCount =0;
     static {
-        todos.add(new Todo(1, "chormun","aws",
+        todos.add(new Todo(++todosCount, "chormun","aws",
                 LocalDate.now().plusYears(1),false));
-        todos.add(new Todo(1, "chormun", "devops",
-                LocalDate.now().plusYears(2),false));
-        todos.add(new Todo(1, "chormun", "learn full stack",
-                LocalDate.now().plusYears(3),false));
+        todos.add(new Todo(++todosCount, "chormun", "devops",
+                LocalDate.now().plusYears(1),false));
+        todos.add(new Todo(++todosCount, "chormun", "learn full stack",
+                LocalDate.now().plusYears(1),false));
     }
     public List<Todo> findByUsername(String username){
         return todos;

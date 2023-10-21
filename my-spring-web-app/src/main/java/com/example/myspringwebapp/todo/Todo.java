@@ -1,5 +1,7 @@
 package com.example.myspringwebapp.todo;
 
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 import java.util.Objects;
 //database(mysql)
@@ -8,9 +10,12 @@ public class Todo {
     //id username, descrion, dtarget date done
     private int id;
     private String username;
+    @Size(min=10, message = "enter alest 10 charator")
     private String description;
     private LocalDate targetDate;
     private boolean done;
+
+
 
     public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
         this.id = id;

@@ -1,17 +1,15 @@
+<%@include file="common/header.jspf" %>
+<%@include file="common/navigation.jspf" %>
 
-<html>
-<head>
+<div class="container">
+    <h1>welcome, ${name}</h1>
+    <a href="list-todos">manage </a>your todos
+</div>
 
-    <title>welcome page</title>
-</head>
-<body>
- welcom to the welcome page!
-<div>your name: ${name}</div>
- <div><a href="list-todos" class="btn btn-success">manage</a>your todo</div>
+
+
 <%-- <div>your passowrd: ${password}</div>--%>
 
 
 
-
-</body>
-</html>
+<%@include file="common/footer.jspf" %>

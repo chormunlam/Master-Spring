@@ -1,13 +1,24 @@
 package com.example.myspringwebapp.todo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 import java.util.Objects;
 //database(mysql)
 //static list of todos => database(h2, mysql)
+
+//JPA
+//bean -> database
+
+@Entity
 public class Todo {
+    public Todo(){}
     //id username, descrion, dtarget date done
+    @Id
+    @GeneratedValue
     private int id;
     private String username;
     @Size(min=10, message = "enter alest 10 charator")

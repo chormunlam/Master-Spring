@@ -31,7 +31,23 @@ public class UserDaoService {//for dataacess , data access object. to operate th
         Predicate<? super User> predicate= user->
                 user.getId().equals(id);
         //convert the list to strem
-        return users.stream().filter(predicate).findFirst().get();
+        return users.stream().filter(predicate).findFirst().orElse(null);//if no found but still get sth else
+
+
+
+    }
+
+    public User deleteById(int id){
+        Predicate<? super User> predicate= user->
+                user.getId().equals(id);
+
+        //remove
+        users.removeIf(predicate);
+        //convert the list to strem
+        return users.stream().filter(predicate).findFirst().orElse(null);//if no found but still get sth else
+
+
+
     }
 
     //save

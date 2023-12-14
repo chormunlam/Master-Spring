@@ -32,6 +32,9 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+<!--		it gonna disable if pack with jar file-->
+
+
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>

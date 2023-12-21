@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+  margin: 10px;
+}
+
+.FirstComponent {
+  color: blue;
+}
+
+.SecComponent {
+  color: purple;
+}
+
+.ThirdComponent {
+  color: green;
+}
+
+.FourComponent {
+  color: orangered;
+}

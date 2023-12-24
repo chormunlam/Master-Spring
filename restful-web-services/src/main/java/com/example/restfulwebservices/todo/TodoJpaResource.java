@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.in28minutes.rest.webservices.restfulwebservices.todo.repository.TodoRepository;
+import com.example.restfulwebservices.todo.repository.TodoRepository;
 
 @RestController
 public class TodoJpaResource {

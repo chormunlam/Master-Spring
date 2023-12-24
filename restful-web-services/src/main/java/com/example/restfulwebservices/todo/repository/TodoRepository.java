@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.in28minutes.rest.webservices.restfulwebservices.todo.Todo;
+import com.example.restfulwebservices.todo.Todo;
 
 public interface TodoRepository extends JpaRepository<Todo, Integer>{
 	

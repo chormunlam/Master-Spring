@@ -5,7 +5,7 @@ export default function Header() {
   const isAuth = authContext.isAuth;
 
   function logout() {
-    authContext.setAuth(false);
+    authContext.logout();
   }
   console.log(isAuth);
   return (

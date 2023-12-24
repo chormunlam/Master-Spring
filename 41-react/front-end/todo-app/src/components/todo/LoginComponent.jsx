@@ -15,7 +15,7 @@ export default function LoginComponent() {
     setPw(event.target.value);
   }
 
-  const [showSucess, setShowSucess] = useState(false);
+  //const [showSucess, setShowSucess] = useState(false); we got redicret now
   const [showError, setShowError] = useState(false);
 
   const navigate = useNavigate();
@@ -26,25 +26,17 @@ export default function LoginComponent() {
     // console.log(pw);
     // console.log(username);
     //tyr the hardcoded creditial
-    if (username === "in28mins" && pw === "dummy") {
-      authContext.setAuth(true);
-      console.log("sucess");
-      setShowSucess(true);
-      setShowError(false);
+    if (authContext.login(username, pw)) {
       navigate(`/welcome/${username}`);
     } else {
-      console.log("fail");
       setShowError(true);
-      setShowSucess(false);
     }
   }
 
   return (
     <div className="Login">
       <h1>Login here</h1>
-      {showSucess && (
-        <div className="sucessMessage"> Authenticated Succesfully</div>
-      )}
+
       {showError && (
         <div className="errorMessage">
           Authenticated Failed, plz check credentials{" "}

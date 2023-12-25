@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "./security/AuthContext";
 
 export default function LoginComponent() {
-  const [username, setUsername] = useState("in28mins");
+  const [username, setUsername] = useState("cc");
   function handleUserNameChange(event) {
     //console.log(event.target.value);
     setUsername(event.target.value);

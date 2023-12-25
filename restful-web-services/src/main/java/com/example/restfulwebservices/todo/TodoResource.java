@@ -3,14 +3,9 @@ package com.example.restfulwebservices.todo;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
-//@RestController
+@RestController
 public class TodoResource {
 	
 	private TodoService todoService;
@@ -47,9 +42,9 @@ public class TodoResource {
 	@PostMapping("/users/{username}/todos")
 	public Todo createTodo(@PathVariable String username,
 			 @RequestBody Todo todo) {
-		Todo createdTodo = todoService.addTodo(username, todo.getDescription(), 
+		Todo createdTodo = todoService.addTodo(username, todo.getDescription(),
 				todo.getTargetDate(),todo.isDone() );
-		
+
 		return createdTodo;
 	}
 

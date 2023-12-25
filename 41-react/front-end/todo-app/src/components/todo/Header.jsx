@@ -19,24 +19,24 @@ export default function Header() {
             >
               in28minutes
             </a>
-            <div className="collapse navbar-collapse">
-              <ul className="navbar-nav">
-                <li className="nav-item fs-5">
-                  {isAuth && (
-                    <Link className="nav-link" to="/welcome/in28minutes">
-                      Home
-                    </Link>
-                  )}
-                </li>
-                <li className="nav-item fs-5">
-                  {isAuth && (
-                    <Link className="nav-link" to="/todos">
-                      Todos
-                    </Link>
-                  )}
-                </li>
-              </ul>
-            </div>
+            {/* <div className="collapse navbar-collapse"> */}
+            <ul className="navbar-nav">
+              <li className="nav-item fs-5">
+                {isAuth && (
+                  <Link className="nav-link" to="/welcome/in28minutes">
+                    Home
+                  </Link>
+                )}
+              </li>
+              <li className="nav-item fs-5">
+                {isAuth && (
+                  <Link className="nav-link" to="/todos">
+                    Todos
+                  </Link>
+                )}
+              </li>
+            </ul>
+            {/* </div> */}
             <ul className="navbar-nav">
               <li className="nav-item fs-5">
                 {!isAuth && (

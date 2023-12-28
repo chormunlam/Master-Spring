@@ -18,14 +18,12 @@ public class RestfulWebServicesApplication {
 	//allow all requets only from http://localhost:3000/
 
 	@Bean
-	public WebMvcConfigurer webMvcConfigurer(){
+	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
-			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
 						.allowedMethods("*")
 						.allowedOrigins("http://localhost:3000");
-				//WebMvcConfigurer.super.addCorsMappings(registry);
 			}
 		};
 	}

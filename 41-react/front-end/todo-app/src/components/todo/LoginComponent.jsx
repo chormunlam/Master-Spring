@@ -22,11 +22,11 @@ export default function LoginComponent() {
 
   const authContext = useAuth();
 
-  function handleSubmit() {
+  async function handleSubmit() {
     // console.log(pw);
     // console.log(username);
     //tyr the hardcoded creditial
-    if (authContext.login(username, pw)) {
+    if (await authContext.login(username, pw)) {
       navigate(`/welcome/${username}`);
     } else {
       setShowError(true);

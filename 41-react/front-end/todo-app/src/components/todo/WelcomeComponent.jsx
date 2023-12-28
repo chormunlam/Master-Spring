@@ -4,10 +4,12 @@ import {
   retrieveHelloWorldBean,
   retrieveHelloWorldPathVar,
 } from "./api/HelloWorldApiService";
+import { useAuth } from "./security/AuthContext";
 export default function WelcomeComponent() {
   const { username } = useParams();
 
   const [message, setMessage] = useState(null);
+  const authContext = useAuth();
 
   function callHelloWorldApi() {
     console.log("called");
@@ -23,8 +25,8 @@ export default function WelcomeComponent() {
     //   .catch((err) => errorResponse(err))
     //   .finally(() => console.log("clean up"));
 
-    //
-    retrieveHelloWorldPathVar("chormunApi")
+    //"Basic Y2M6MjI=",
+    retrieveHelloWorldPathVar("chormunApi", authContext.token)
       .then((res) => successResponse(res))
       .catch((err) => errorResponse(err))
       .finally(() => console.log("clean up"));
@@ -36,7 +38,7 @@ export default function WelcomeComponent() {
   }
 
   function errorResponse(err) {
-    console.log("errrrrrr: " + err);
+    console.log(err);
   }
 
   return (

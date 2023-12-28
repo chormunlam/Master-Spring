@@ -20,7 +20,10 @@ export default function ListTodosComponent() {
     today.getDay()
   );
 
-  useEffect(() => refreshTodos());
+  //useEffect(() => refreshTodos());
+  useEffect(() => {
+    refreshTodos();
+  }, []); // Ensure the dependency array is correct or contains only necessary variables
 
   function refreshTodos() {
     retrieveAllTodosForUsernameApi(username)
